@@ -8,6 +8,9 @@ body {
     padding: 15px;
     z-index: 10;
   }
+  header img {
+    cursor: pointer;
+  }
   header ul {
     float: right;
     color: white;
@@ -64,7 +67,15 @@ body {
   }
   footer {
     background-color: #BCD1FF;
-    padding: 5px;
+    padding: 5px 5px 5px 20px;
+  }
+  footer h4 {
+    color: #424EDE;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 0px;
   }
   footer ul {
     list-style: none;
@@ -73,16 +84,18 @@ body {
     font-family: 'Cabin', sans-serif;
     font-size: 20px;
     cursor: pointer;
+    margin-top: 10px;
   }
   footer li {
-    display: inline-block;
-    padding: 0px 7px;
+    display: flex;
+    padding-top: 5px;
   }
   .heading {
     text-align: center;
     padding: 15px 5px;
     font-size: 30px;
   }
+
   /* My UX Skills Section */
   h3 {
     font-family: 'Poppins', sans-serif;
@@ -95,10 +108,13 @@ body {
   .flexContainer div {
     width: 33%;
     padding: 25px;
+    text-align: center;
   }
+
+  /* My Tools Section (placeholder) */
   
   /* My Work Section */
-  h4 {
+  .myWork h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
   }
@@ -113,7 +129,7 @@ body {
   }
   .workGrid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 450px 450px 450px;
     grid-template-areas:
     "img1 content1"
@@ -137,7 +153,7 @@ body {
     grid-area: img3;
   }
   .img1, .img2, .img3, .content1, .content2, .content3 {
-    padding: 80px;
+    padding: 50px;
   }
   .content1 {
     grid-area: content1;
@@ -147,5 +163,19 @@ body {
   }
   .content3 {
     grid-area: content3;
+  }
+  @media only screen and (max-width: 600px) {
+    .workGrid {
+      grid-template-rows: 450px 450px 450px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "img1"
+      "content 1"
+      "img2" 
+      "content2"
+      "img3" 
+      "content3"
+      ;
+    }
   }
   
